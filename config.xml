@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8" standalone="yes"?>
 <widget id="com.ionicframework.ionictodo314175" version="1.0.1" xmlns="http://www.w3.org/ns/widgets" xmlns:cdv="http://cordova.apache.org/ns/1.0">
   <name>Simple Material Todo</name>
-  <description>A very simple to do list made with Google's </description>
+  <description>A very simple to do list made with Google's Material Design in mind. </description>
   <author email="jeff03597@gmail.com">Jeff Edmondson</author>
   <content src="index.html"/>
   <access origin="*"/>
