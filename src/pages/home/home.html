@@ -1,0 +1,47 @@
+<ion-header>
+  <ion-navbar color="primary" align-title="left" >
+    <ion-title>
+      Todos
+    </ion-title>
+    <!-- End means tat the button wil be placed in the
+    "end" position -->
+    <ion-buttons end>
+      <button ion-button icon-only (click)="addItem()">
+        <ion-icon name="add-circle"></ion-icon>
+      </button>
+    </ion-buttons>
+  </ion-navbar>
+</ion-header>
+
+<ion-content padding class="pane">
+
+
+  <ion-list class="rightPadding">
+    <ion-card *ngFor="let item of items">
+
+
+      <ion-card-header class="itemHeader" text-wrap *ngIf="item.title">
+        <ion-item>
+          <span class="title"(click)="viewItem(item)">{{item.title}}</span>
+            <button ion-button icon-only clear (click)="editItem(item)" item-right>
+              <ion-icon name="build" class="customIcon"></ion-icon>
+            </button>
+          <button ion-button icon-only class="deleteButton" clear (click)="deleteItem(item)" item-right>
+            <ion-icon name="remove-circle" class="customIcon"></ion-icon>
+          </button>
+        </ion-item>
+      </ion-card-header>
+
+      <ion-card-content *ngIf="item.description" (click)="viewItem(item)">
+        <hr class="hr"><span class="description">{{item.description}}</span>
+      </ion-card-content>
+    </ion-card>
+  </ion-list>
+
+  <ion-fab right bottom>
+    <button ion-fab (click)="addItem()">
+      <ion-icon name="add" ></ion-icon>
+    </button>
+ </ion-fab>
+
+</ion-content>
